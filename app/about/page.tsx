@@ -62,6 +62,65 @@ We understand there’s a lot of misinformation out there. That’s exactly why 
             </div>
           </div>
         </section>
+
+
+        {/* Resource Links Section */}
+<section className="bg-white py-12 border-t">
+  <div className="container mx-auto px-4">
+    <h3 className="text-2xl font-bold text-center mb-8">Learn More About TradeQuo</h3>
+    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 text-blue-700">
+      <a
+        href="https://www.tradequo.com/fsu/about-us/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:underline"
+      >
+        🔍 Check More about TradeQuo
+      </a>
+      <a
+        href="https://www.tradequo.com/fsu/deposits-withdrawals/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:underline"
+      >
+        💰 Deposits and Withdrawals
+      </a>
+      <a
+        href="https://www.tradequo.com/fsu/blog/transparent-trusted-and-targeted-what-traders-need-to-know-about-real-brokers-and-fake-reviews/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:underline"
+      >
+        ✅ Trust and Transparency
+      </a>
+      <a
+        href="https://www.tradequo.com/fsu/blog/the-hidden-costs-of-trust-is-your-broker-truly-trustworthy-5-major-red-flags/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:underline"
+      >
+        🚨 The Hidden Costs of Trust
+      </a>
+      <a
+        href="https://www.tradequo.com/fsu/blog/new-client-fund-security/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:underline"
+      >
+        🔐 Client Fund Security
+      </a>
+      <a
+        href="https://www.tradequo.com/fsu/blog/a-new-era-of-broker-transparency-proof-of-reserves/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:underline"
+      >
+        📊 Proof of Reserves
+      </a>
+    </div>
+  </div>
+</section>
+
       </main>
 
       <Footer />
