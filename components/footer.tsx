@@ -31,7 +31,7 @@ const footerLinks = {
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-10">
         <div className="max-w-screen-xxl mx-auto px-4">
         <div className="grid md:grid-cols-2 lg:grid-cols-6">
           {/* Brand */}
@@ -46,7 +46,7 @@ export default function Footer() {
           
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-gray-800  flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">© {new Date().getFullYear()} ReviewHub. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="#" className="text-gray-400 hover:text-white transition-colors">
