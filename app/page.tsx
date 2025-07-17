@@ -7,8 +7,6 @@ import Header from "@/components/header"
 import Footer from "@/components/footer"
 import ReviewSection from "@/components/review-section"
 import HeroSection from "@/components/hero-section"
-import StatsSection from "@/components/stats-section"
-import FeaturesSection from "@/components/features-section"
 import TestimonialsSection from "@/components/testimonials-section"
 
 const trustpilotReviews = [
@@ -169,8 +167,8 @@ export default function HomePage() {
       <main className="overflow-hidden">
         
         <HeroSection />
-        <FeaturesSection />
-        <StatsSection />
+        
+        
 
         <div className="space-y-32 py-20">
           <ReviewSection
