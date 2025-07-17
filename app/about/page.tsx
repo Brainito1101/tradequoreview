@@ -26,10 +26,8 @@ export default function AboutPage() {
               className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
             >
               <h1 className="text-5xl font-bold text-white mb-6">About Us</h1>
-              <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-                At TradeQuo, we genuinely care about our trader community. Everything we do is built around transparency, trust, and the long-term success of our users. We're not here to just provide a platform — we're here to be your trading partner.
-We understand there’s a lot of misinformation out there. That’s exactly why this page exists — to clear the air and offer a space where you can truly understand who we are and what we stand for.
-              </p>
+              
+                
             </div>
           </div>
         </section>
@@ -41,9 +39,12 @@ We understand there’s a lot of misinformation out there. That’s exactly why 
               <div
                 className={`transition-all duration-1000 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
               >
-                <h2 className="text-4xl font-bold text-center mb-12">Our Story</h2>
+                
                 <div className="prose prose-lg mx-auto text-gray-600">
                   <p className="text-xl leading-relaxed mb-6">
+                    At TradeQuo, we genuinely care about our trader community. Everything we do is built around transparency, trust, and the long-term success of our users. We're not here to just provide a platform — we're here to be your trading partner.
+We understand there’s a lot of misinformation out there. That’s exactly why this page exists — to clear the air and offer a space where you can truly understand who we are and what we stand for.
+              
                     TradeQuo is not involved in any scam activity, nor do we endorse or tolerate any unethical behavior. We believe in integrity, regulated trading practices, and real human support. In fact, many of our traders have shared their honest experiences — and we encourage you to read them to see for yourself.
                   </p>
                   <p className="text-lg leading-relaxed mb-6">
