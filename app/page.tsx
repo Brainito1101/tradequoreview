@@ -212,70 +212,7 @@ export default function HomePage() {
 
         <TestimonialsSection />
 
-        {/* Enhanced CTA Section */}
-        <section className="py-32 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900"></div>
-          <div className="absolute inset-0 bg-black/20"></div>
-
-          {/* Animated background elements */}
-          <div className="absolute top-20 left-20 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-
-          <div className="container mx-auto px-4 text-center relative z-10">
-            <div
-              className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-            >
-              <div className="max-w-4xl mx-auto">
-                <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">
-                  Ready to Transform Your
-                  <span className="block bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
-                    Review Management?
-                  </span>
-                </h2>
-                <p className="text-xl md:text-2xl text-gray-200 mb-12 max-w-3xl mx-auto leading-relaxed">
-                  Join thousands of businesses that trust our platform for comprehensive review aggregation and
-                  insights.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                  <Button
-                    size="lg"
-                    className="text-lg px-10 py-6 bg-white text-gray-900 hover:bg-gray-100 rounded-full shadow-2xl"
-                  >
-                    Start Your Free Trial
-                    <ChevronRight className="ml-2 h-5 w-5" />
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="text-lg px-10 py-6 text-white border-2 border-white/30 hover:bg-white/10 rounded-full backdrop-blur-sm bg-transparent"
-                  >
-                    <Play className="mr-2 h-5 w-5" />
-                    Watch Demo
-                  </Button>
-                </div>
-
-                <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-white mb-2">14-Day</div>
-                    <div className="text-gray-300 text-sm">Free Trial</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-white mb-2">No</div>
-                    <div className="text-gray-300 text-sm">Setup Fees</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-white mb-2">24/7</div>
-                    <div className="text-gray-300 text-sm">Support</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-white mb-2">Cancel</div>
-                    <div className="text-gray-300 text-sm">Anytime</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        
       </main>
 
       <Footer />
