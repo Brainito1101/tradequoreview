@@ -59,17 +59,10 @@ We understand there’s a lot of misinformation out there. That’s exactly why 
                   
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
 
 
-        {/* Resource Links Section */}
-<section className="bg-white py-12 border-t">
-  <div className="container mx-auto px-4">
-    <h3 className="text-2xl font-bold text-center mb-8">Learn More About TradeQuo</h3>
-    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 text-blue-700">
-      <a
+
+              <a
         href="https://www.tradequo.com/fsu/about-us/"
         target="_blank"
         rel="noopener noreferrer"
@@ -77,7 +70,9 @@ We understand there’s a lot of misinformation out there. That’s exactly why 
       >
         🔍 Check More about TradeQuo
       </a>
-      <a
+      <br />
+
+      <a 
         href="https://www.tradequo.com/fsu/deposits-withdrawals/"
         target="_blank"
         rel="noopener noreferrer"
@@ -85,6 +80,9 @@ We understand there’s a lot of misinformation out there. That’s exactly why 
       >
         💰 Deposits and Withdrawals
       </a>
+
+      <br />
+
       <a
         href="https://www.tradequo.com/fsu/blog/transparent-trusted-and-targeted-what-traders-need-to-know-about-real-brokers-and-fake-reviews/"
         target="_blank"
@@ -93,6 +91,8 @@ We understand there’s a lot of misinformation out there. That’s exactly why 
       >
         ✅ Trust and Transparency
       </a>
+
+      <br />
       <a
         href="https://www.tradequo.com/fsu/blog/the-hidden-costs-of-trust-is-your-broker-truly-trustworthy-5-major-red-flags/"
         target="_blank"
@@ -101,6 +101,9 @@ We understand there’s a lot of misinformation out there. That’s exactly why 
       >
         🚨 The Hidden Costs of Trust
       </a>
+
+      <br />
+
       <a
         href="https://www.tradequo.com/fsu/blog/new-client-fund-security/"
         target="_blank"
@@ -109,6 +112,9 @@ We understand there’s a lot of misinformation out there. That’s exactly why 
       >
         🔐 Client Fund Security
       </a>
+     
+     <br />
+
       <a
         href="https://www.tradequo.com/fsu/blog/a-new-era-of-broker-transparency-proof-of-reserves/"
         target="_blank"
@@ -117,9 +123,14 @@ We understand there’s a lot of misinformation out there. That’s exactly why 
       >
         📊 Proof of Reserves
       </a>
-    </div>
-  </div>
-</section>
+
+            </div>
+          </div>
+        </section>
+
+
+
+
 
       </main>
 
