@@ -84,7 +84,7 @@ export default function TestimonialsSection() {
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Don't just take our word for it. Here's what industry leaders have to say about ReviewHub.
+            Don't just take our word for it. Here's what industry leaders have to say about TradeQuo Review.
           </p>
         </div>
 
