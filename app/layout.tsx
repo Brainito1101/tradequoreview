@@ -6,10 +6,10 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "ReviewHub - Aggregate Reviews From Every Platform",
+  title: "Tradequo Review - Aggregate Reviews From Every Platform",
   description:
     "Discover authentic customer feedback from Trustpilot, Traders Union, Review.io, and Brokersview all in one comprehensive dashboard.",
-    generator: 'v0.dev'
+    generator: 'Tradequo'
 }
 
 export default function RootLayout({
