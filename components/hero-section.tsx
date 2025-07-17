@@ -52,7 +52,7 @@ export default function HeroSection() {
               variant="secondary"
               className="mb-6 bg-gradient-to-r from-blue-500 to-purple-500 text-white border-0 px-4 py-2"
             >
-              ✨ Trusted by 50,000+ businesses worldwide
+              ✨ Make investment easy for everyone.
             </Badge>
 
             <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
