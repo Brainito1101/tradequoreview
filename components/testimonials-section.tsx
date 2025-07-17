@@ -12,7 +12,7 @@ const testimonials = [
     company: "TechFlow Solutions",
     avatar: "/placeholder.svg?height=80&width=80",
     content:
-      "ReviewHub has completely transformed how we manage customer feedback. The insights we get are incredible and have directly contributed to a 40% increase in our customer satisfaction scores.",
+      "TradeQuo Review has completely transformed how we manage customer feedback. The insights we get are incredible and have directly contributed to a 40% increase in our customer satisfaction scores.",
     rating: 5,
   },
   {
