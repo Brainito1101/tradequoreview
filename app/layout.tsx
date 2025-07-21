@@ -6,9 +6,9 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Tradequo Review - Aggregate Reviews From Every Platform",
+  title: "TradeQuo Review – Is This Forex Broker Legit?",
   description:
-    "Discover authentic customer feedback from Trustpilot, Traders Union, Review.io, and Brokersview all in one comprehensive dashboard.",
+    "Unbiased TradeQuo review for 2025. Discover if this Seychelles-regulated broker is safe, fast, and worth your trust before opening an account.",
     generator: 'Tradequo'
 }
 
@@ -19,6 +19,36 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "TradeQuo Forex Broker",
+  "image": "https://www.tradequoreviews.com/images/tradequo-logo.jpg",
+  "description": "TradeQuo is a forex broker regulated in Seychelles offering MT5 trading, high leverage, and fast withdrawals. Our review covers pros, cons, and user experience.",
+  "brand": {
+    "@type": "Brand",
+    "name": "TradeQuo"
+  },
+  "review": {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "4.5",
+      "bestRating": "5"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "TradeQuo Reviews"
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "reviewCount": "215"
+  }
+}
+</script>
       
       <body className={inter.className}>
         {children}
