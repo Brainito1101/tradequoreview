@@ -12,7 +12,7 @@ const testimonials = [
     company: "TechFlow Solutions",
     avatar: "/placeholder.svg?height=80&width=80",
     content:
-      "ReviewHub has completely transformed how we manage customer feedback. The insights we get are incredible and have directly contributed to a 40% increase in our customer satisfaction scores.",
+      "TradeQuo Review has completely transformed how we manage customer feedback. The insights we get are incredible and have directly contributed to a 40% increase in our customer satisfaction scores.",
     rating: 5,
   },
   {
@@ -84,7 +84,7 @@ export default function TestimonialsSection() {
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Don't just take our word for it. Here's what industry leaders have to say about ReviewHub.
+            Don't just take our word for it. Here's what industry leaders have to say about TradeQuo Review.
           </p>
         </div>
 

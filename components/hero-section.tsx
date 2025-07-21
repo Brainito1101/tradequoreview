@@ -1,5 +1,5 @@
 "use client"
-
+import Link from "next/link"
 import { useState, useEffect } from "react"
 import { Star, TrendingUp, Shield, Zap, ArrowRight, Play } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -52,7 +52,7 @@ export default function HeroSection() {
               variant="secondary"
               className="mb-6 bg-gradient-to-r from-blue-500 to-purple-500 text-white border-0 px-4 py-2"
             >
-              ✨ Trusted by 50,000+ businesses worldwide
+              ✨ Make investment easy for everyone.
             </Badge>
 
             <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
@@ -71,21 +71,15 @@ export default function HeroSection() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
+              <Link href="https://www.tradequo.com/fsu/features/"> 
               <Button
                 size="lg"
                 className="text-lg px-8 py-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-full shadow-xl"
               >
-                Start Free Trial
+                Join TradeQuo
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="text-lg px-8 py-6 border-2 rounded-full hover:bg-gray-50 bg-transparent"
-              >
-                <Play className="mr-2 h-5 w-5" />
-                Watch Demo
-              </Button>
+                </Link>
             </div>
 
             {/* Feature Stats */}
@@ -120,7 +114,7 @@ export default function HeroSection() {
                     <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                     <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                   </div>
-                  <div className="text-sm text-gray-500">ReviewHub Dashboard</div>
+                  <div className="text-sm text-gray-500">TradeQuo Review Dashboard</div>
                 </div>
 
                 {/* Mock Content */}
