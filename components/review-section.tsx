@@ -49,7 +49,7 @@ export default function ReviewSection({ title, subtitle, platform, color, delay 
   useEffect(() => {
     async function fetchReviews() {
       try {
-        const res = await fetch(`http://127.0.0.1:8000/api/reviews/?section=${platform}`)
+        const res = await fetch(`https://tradequoreview-backend.onrender.com/api/reviews/?section=${platform}`)
         const data = await res.json()
         setReviews(data)
       } catch (error) {
