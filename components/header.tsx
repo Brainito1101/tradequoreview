@@ -27,10 +27,10 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <Image
-        src="/tradequo-logo.png"
+        src="/logo.png"
         alt="Tradequo Logo"
-        width={32}
-        height={32}
+        width={250}
+        height={50}
         className="rounded-lg"
       />
           </Link>
