@@ -14,29 +14,29 @@ export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false)
   const [trustpilotReviews, setTrustpilotReviews] = useState([]);
 
-const [tradersUnionReviews, setTradersUnionReviews] = useState([]);
+//const [tradersUnionReviews, setTradersUnionReviews] = useState([]);
 
 const [reviewIoReviews, setReviewIoReviews] = useState([]);
 
 const [brokersviewReviews, setBrokersviewReviews] = useState([]);
 
-const [forexpeacearmyReviews, setForexpeacearmyReviews] = useState([]);
+//const [forexpeacearmyReviews, setForexpeacearmyReviews] = useState([]);
 
 useEffect(() => {
   setIsVisible(true);
 
   async function loadReviews() {
     const trustpilot = await fetchReviews("trustpilot");
-    const tradersUnion = await fetchReviews("traders_union");
+    
     const reviewIo = await fetchReviews("review_io");
     const brokersview = await fetchReviews("brokersview");
-    const forexpeacearmy = await fetchReviews("forexpeacearmy");
+    //const forexpeacearmy = await fetchReviews("forexpeacearmy");
 
     setTrustpilotReviews(trustpilot);
-    setTradersUnionReviews(tradersUnion);
+    
     setReviewIoReviews(reviewIo);
     setBrokersviewReviews(brokersview);
-    setBrokersviewReviews(forexpeacearmy);
+    //setBrokersviewReviews(forexpeacearmy);
   }
 
   loadReviews();
@@ -63,15 +63,6 @@ useEffect(() => {
           />
 
           <ReviewSection
-            title="Traders Union Reviews"
-            subtitle="Professional trading community insights"
-           
-            platform="traders_union"
-            color="from-blue-500 to-cyan-600"
-            delay={0.2}
-          />
-
-          <ReviewSection
             title="Review.io Feedback"
             subtitle="Comprehensive customer feedback platform"
             
@@ -89,14 +80,14 @@ useEffect(() => {
             delay={0.4}
           />
 
-          <ReviewSection
+          {/*<ReviewSection
             title="Forex Peace Army Ratings"
             subtitle="Expert broker analysis and ratings"
             
             platform="forex_peace_army"
             color="from-orange-500 to-red-500"
             delay={0.4}
-          />
+          />*/}
         </div>
 
         <TestimonialsSection />
