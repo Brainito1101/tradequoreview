@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from 'next/image'
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Menu, Star } from "lucide-react"
@@ -25,12 +26,13 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <Star className="h-5 w-5 text-white" />
-            </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              TRADEQUO
-            </span>
+            <Image
+        src="/logo.png"
+        alt="Tradequo Logo"
+        width={250}
+        height={50}
+        className="rounded-lg"
+      />
           </Link>
 
           {/* Desktop Navigation */}
