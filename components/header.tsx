@@ -41,8 +41,8 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-sm font-medium transition-colors hover:text-blue-600 ${
-                  pathname === item.href ? "text-blue-600" : "text-gray-700"
+                className={`text-sm font-medium transition-colors hover:text-red-600 ${
+                  pathname === item.href ? "text-red-600" : "text-gray-700"
                 }`}
               >
                 {item.name}
@@ -52,10 +52,10 @@ export default function Header() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" size="sm">
+            <Button className="bg-red-600" size="sm">
               Sign In
             </Button>
-            <Button size="sm" className="bg-gradient-to-r from-blue-600 to-purple-600">
+            <Button size="sm" className="bg-gradient-to-r from-red-600 to-black-600">
               Get Started
             </Button>
           </div>
@@ -74,16 +74,16 @@ export default function Header() {
                     key={item.name}
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className={`text-lg font-medium transition-colors hover:text-blue-600 ${
-                      pathname === item.href ? "text-blue-600" : "text-gray-700"
+                    className={`text-lg font-medium transition-colors hover:text-red-600 ${
+                      pathname === item.href ? "text-red-600" : "text-gray-700"
                     }`}
                   >
                     {item.name}
                   </Link>
                 ))}
                 <div className="flex flex-col space-y-3 pt-6 border-t">
-                  <Button variant="outline">Sign In</Button>
-                  <Button className="bg-gradient-to-r from-blue-600 to-purple-600">Get Started</Button>
+                  <Button className="bg-red-600">Sign In</Button>
+                  <Button className="bg-gradient-to-r from-red-600 to-black-600">Get Started</Button>
                 </div>
               </div>
             </SheetContent>

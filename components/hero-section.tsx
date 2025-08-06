@@ -11,7 +11,7 @@ const slides = [
     subtitle:
       "Trade Indices, Shares, Commodities, and Crypto with lightning-fast execution and deep liquidity across global markets.",
     cta: "Start Trading",
-    link: "#",
+    link: "https://www.tradequo.com/",
     image: "/banner-2.png",
   },
   /*{{
