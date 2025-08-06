@@ -7,9 +7,9 @@ import { Analytics } from "@vercel/analytics/next"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "TradeQuo Review – Is This Forex Broker Legit?",
+  title: "TradeQuo Global Review 2025: Pros, Cons & Real User Insights",
   description:
-    "Unbiased TradeQuo review for 2025. Discover if this Seychelles-regulated broker is safe, fast, and worth your trust before opening an account.",
+    "Curious if TradeQuo is the right broker for you in 2025? We’ve gathered real reviews, pros and cons, and firsthand experiences you won’t find on Trustpilot. Get the full picture here.",
   generator: "Tradequo",
 };
 
