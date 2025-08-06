@@ -2,9 +2,6 @@
 
 import { useState, useEffect, useRef } from "react"
 import { Star, CheckCircle, Calendar, MapPin, Quote } from "lucide-react"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
 
 interface Review {
   id: number
@@ -127,56 +124,6 @@ const staticReviews = {
       date: "2024-01-10",
       badge_text: "Verified Customer",
       location: "Colombia"
-    },
-    {
-      id: 11,
-      name: "welile nelson",
-      avatar: "",
-      stars: 5,
-      review_content: "Tradequipment is amazing.",
-      date: "2023-12-27",
-      badge_text: "Verified Customer",
-      location: "Japan"
-    },
-    {
-      id: 12,
-      name: "Iyanne Chua Santos",
-      avatar: "",
-      stars: 5,
-      review_content: "One of the best trading platforms right now.",
-      date: "2023-12-26",
-      badge_text: "Verified Customer",
-      location: "Philippines"
-    },
-    {
-      id: 13,
-      name: "Jenniline Espiritu",
-      avatar: "",
-      stars: 5,
-      review_content: "Preferred platform—reliable and efficient.",
-      date: "2023-12-25",
-      badge_text: "Verified Customer",
-      location: "Philippines"
-    },
-    {
-      id: 14,
-      name: "Oyo Lab",
-      avatar: "",
-      stars: 5,
-      review_content: "Simple, amazing interface—great for new users.",
-      date: "2023-12-25",
-      badge_text: "Verified Customer",
-      location: "Philippines"
-    },
-    {
-      id: 15,
-      name: "Tarek Khattab",
-      avatar: "",
-      stars: 4,
-      review_content: "Amazing and fantastic.",
-      date: "2023-12-25",
-      badge_text: "Verified Customer",
-      location: "U.A.E."
     }
   ],
   brokersview: [
@@ -249,26 +196,6 @@ const staticReviews = {
       date: "2024-09-10",
       badge_text: "Verified Trader",
       location: "Thailand"
-    },
-    {
-      id: 8,
-      name: "Aleksander K",
-      avatar: "",
-      stars: 5,
-      review_content: "Amazing broker; zero spread, great support, instant withdrawals.",
-      date: "2024-09-05",
-      badge_text: "Verified Trader",
-      location: "Thailand"
-    },
-    {
-      id: 9,
-      name: "Ren",
-      avatar: "",
-      stars: 5,
-      review_content: "Legit broker! Started with limitless account for small capital and high leverage. After a month of smooth trading, I switched to standard account with 1:1000 leverage and still getting consistent profits.",
-      date: "2025-04-15",
-      badge_text: "Verified Trader",
-      location: "Indonesia"
     }
   ],
   review_io: [
@@ -331,96 +258,6 @@ const staticReviews = {
       date: "2025-07-10",
       badge_text: "Verified Review",
       location: "India"
-    },
-    {
-      id: 7,
-      name: "Jutha Pr",
-      avatar: "",
-      stars: 5,
-      review_content: "Intuitive and easy-to-use UI.",
-      date: "2025-07-10",
-      badge_text: "Verified Review",
-      location: "Thailand"
-    },
-    {
-      id: 8,
-      name: "Ming",
-      avatar: "",
-      stars: 5,
-      review_content: "Account setup smooth, professional, efficient.",
-      date: "2025-07-10",
-      badge_text: "Verified Review",
-      location: "China"
-    },
-    {
-      id: 9,
-      name: "Maloney FX",
-      avatar: "",
-      stars: 5,
-      review_content: "App UX makes sense immediately—rare ease.",
-      date: "2025-07-10",
-      badge_text: "Verified Review",
-      location: "Australia"
-    },
-    {
-      id: 10,
-      name: "Fernand",
-      avatar: "",
-      stars: 5,
-      review_content: "Speedy withdrawal system; seamless and professional.",
-      date: "2025-07-10",
-      badge_text: "Verified Review",
-      location: "France"
-    },
-    {
-      id: 11,
-      name: "Non-Pa Money",
-      avatar: "",
-      stars: 5,
-      review_content: "Fair, clearly communicated costs.",
-      date: "2025-07-10",
-      badge_text: "Verified Review",
-      location: "Vietnam"
-    },
-    {
-      id: 12,
-      name: "ViiaShclepi",
-      avatar: "",
-      stars: 5,
-      review_content: "Fast and effortless account creation.",
-      date: "2025-07-10",
-      badge_text: "Verified Review",
-      location: "Estonia"
-    },
-    {
-      id: 13,
-      name: "Kyria",
-      avatar: "",
-      stars: 5,
-      review_content: "Transparent charges; good service.",
-      date: "2025-07-10",
-      badge_text: "Verified Review",
-      location: "Greece"
-    },
-    {
-      id: 14,
-      name: "Ng Nguyen",
-      avatar: "",
-      stars: 5,
-      review_content: "Clean design; trustworthy user experience.",
-      date: "2025-07-10",
-      badge_text: "Verified Review",
-      location: "Vietnam"
-    },
-    {
-      id: 15,
-      name: "Dimas",
-      avatar: "",
-      stars: 5,
-      review_content: "Exceptional fast withdrawals; amazing experience.",
-      date: "2025-07-10",
-      badge_text: "Verified Review",
-      location: "Indonesia"
     }
   ]
 }
@@ -450,20 +287,6 @@ export default function ReviewSection({ title, subtitle, platform, color, delay 
     // Set static reviews based on platform
     const platformReviews = staticReviews[platform as keyof typeof staticReviews] || []
     setReviews(platformReviews)
-    
-    // Fallback to API if needed (keep original API logic as backup)
-    if (platformReviews.length === 0) {
-      async function fetchReviews() {
-        try {
-          const res = await fetch(`http://127.0.0.1:8000/api/reviews/?section=${platform}`)
-          const data = await res.json()
-          setReviews(data)
-        } catch (error) {
-          console.error("Failed to fetch reviews:", error)
-        }
-      }
-      fetchReviews()
-    }
   }, [platform])
 
   const renderStars = (rating: number) => {
@@ -480,14 +303,27 @@ export default function ReviewSection({ title, subtitle, platform, color, delay 
     })
   }
 
-  // Function to truncate text to a specific length
   const truncateText = (text: string, maxLength: number) => {
     if (text.length <= maxLength) return text
     return text.slice(0, maxLength) + "..."
   }
 
+  const scrollLeft = () => {
+    if (scrollRef.current) {
+      const cardWidth = scrollRef.current.children[0]?.clientWidth || 300
+      scrollRef.current.scrollBy({ left: -cardWidth, behavior: "smooth" })
+    }
+  }
+
+  const scrollRight = () => {
+    if (scrollRef.current) {
+      const cardWidth = scrollRef.current.children[0]?.clientWidth || 300
+      scrollRef.current.scrollBy({ left: cardWidth, behavior: "smooth" })
+    }
+  }
+
   return (
-    <div className="max-w-screen-xxl mx-auto px-4">
+    <div className="w-full">
       <section id={`${platform}-section`} className="py-20 relative overflow-hidden">
         {/* Background Blobs */}
         <div className={`absolute top-20 left-20 w-72 h-72 bg-gradient-to-r ${color} opacity-5 rounded-full blur-3xl`} />
@@ -504,138 +340,130 @@ export default function ReviewSection({ title, subtitle, platform, color, delay 
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">{subtitle}</p>
             </div>
 
-            {/* Reviews Grid */}
+            {/* Reviews Container */}
             <div className="mb-12">
-              {/* Scrollable Reviews */}
-              <div
-                ref={scrollRef}
-                className="flex overflow-x-auto space-x-6 pb-4 -mx-4 px-4 snap-x snap-mandatory scroll-smooth no-scrollbar"
-                style={{
-                  scrollbarWidth: 'none',
-                  msOverflowStyle: 'none',
-                }}
-              >
-                {reviews.map((review, index) => (
-                  <div
-                    key={review.id}
-                    className="min-w-[90%] sm:min-w-[460px] snap-start flex-shrink-0"
-                  >
-                    <Card 
-                      className={`group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-0 bg-white shadow-lg ${
-                        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-                      }`}
+              <div className="relative">
+                {/* Reviews Scroll Container */}
+                <div
+                  ref={scrollRef}
+                  className="flex gap-6 overflow-x-auto pb-4 scroll-smooth hide-scrollbar"
+                >
+                  {reviews.map((review, index) => (
+                    <div
+                      key={review.id}
+                      className="flex-none w-72 sm:w-80"
                       style={{
-    width: '500px',
-    minHeight: '300px',
-    maxHeight: '350px',
-    animationDelay: `${index * 200}ms`
-  }}
+                        animationDelay: `${index * 200}ms`
+                      }}
                     >
-                      <CardContent className="p-6 sm:p-8 relative h-full flex flex-col justify-between">
-                        {/* Quote Icon */}
-                        <div className={`absolute top-6 right-6 w-8 h-8 bg-gradient-to-r ${color} rounded-full flex items-center justify-center opacity-20`}>
-                          <Quote className="h-4 w-4 text-white" />
-                        </div>
+                      <div 
+                        className={`group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-0 bg-white shadow-lg rounded-xl h-80 ${
+                          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                        }`}
+                      >
+                        <div className="p-6 relative h-full flex flex-col justify-between">
+                          {/* Quote Icon */}
+                          <div className={`absolute top-6 right-6 w-8 h-8 bg-gradient-to-r ${color} rounded-full flex items-center justify-center opacity-20`}>
+                            <Quote className="h-4 w-4 text-white" />
+                          </div>
 
-                        {/* Top Section: User Info */}
-                        <div className="flex items-center space-x-4 mb-4">
-                          <div className="relative flex-shrink-0">
-                            {review.avatar ? (
-                              <img
-                                src={review.avatar}
-                                alt={review.name}
-                                className="w-12 h-12 rounded-full object-cover border-2 border-gray-100"
-                              />
-                            ) : (
-                              <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center border-2 border-gray-100">
-                                <span className="text-sm font-semibold text-gray-700">
-                                  {review.name?.charAt(0).toUpperCase()}
-                                </span>
+                          {/* User Info */}
+                          <div className="flex items-center space-x-4 mb-4">
+                            <div className="relative flex-shrink-0">
+                              {review.avatar ? (
+                                <img
+                                  src={review.avatar}
+                                  alt={review.name}
+                                  className="w-12 h-12 rounded-full object-cover border-2 border-gray-100"
+                                />
+                              ) : (
+                                <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center border-2 border-gray-100">
+                                  <span className="text-sm font-semibold text-gray-700">
+                                    {review.name?.charAt(0).toUpperCase()}
+                                  </span>
+                                </div>
+                              )}
+                              <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
+                                <CheckCircle className="h-3 w-3 text-white" />
                               </div>
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <h4 className="font-bold text-gray-900 text-base truncate">{review.name}</h4>
+                              <div className="flex items-center space-x-2 mb-1">
+                                <div className="flex space-x-1">{renderStars(review.stars)}</div>
+                                <span className="text-sm font-semibold text-gray-700">{review.stars}.0</span>
+                              </div>
+                              <div className="flex items-center text-sm text-gray-500">
+                                <MapPin className="h-3 w-3 mr-1 flex-shrink-0" />
+                                <span className="truncate">{review.location}</span>
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Review Content */}
+                          <div className="flex-1 mb-4">
+                            <blockquote className="text-gray-700 leading-relaxed text-sm">
+                              "{truncateText(review.review_content, 120)}"
+                            </blockquote>
+                          </div>
+
+                          {/* Bottom Meta */}
+                          <div className="flex items-center justify-between pt-3 border-t border-gray-100">
+                            <div className="flex items-center text-xs text-gray-500">
+                              <Calendar className="h-3 w-3 mr-1" />
+                              {formatDate(review.date)}
+                            </div>
+                            {review.badge_text && (
+                              <span className={`bg-gradient-to-r ${color} text-white text-xs px-2 py-1 rounded-full`}>
+                                {review.badge_text}
+                              </span>
                             )}
-                            <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
-                              <CheckCircle className="h-3 w-3 text-white" />
-                            </div>
-                          </div>
-                          <div className="flex-1 min-w-0">
-                            <h4 className="font-bold text-gray-900 text-base truncate">{review.name}</h4>
-                            <div className="flex items-center space-x-2 mb-1">
-                              <div className="flex space-x-1">{renderStars(review.stars)}</div>
-                              <span className="text-sm font-semibold text-gray-700">{review.stars}.0</span>
-                            </div>
-                            <div className="flex items-center text-sm text-gray-500">
-                              <MapPin className="h-3 w-3 mr-1 flex-shrink-0" />
-                              <span className="truncate">{review.location}</span>
-                            </div>
                           </div>
                         </div>
-
-                        {/* Middle Section: Review Content */}
-                        <div className="flex-1 mb-4">
-                          <blockquote className="text-gray-700 leading-relaxed text-sm line-clamp-4">
-                            "{truncateText(review.review_content, 180)}"
-                          </blockquote>
-                        </div>
-
-                        {/* Bottom Section: Meta */}
-                        <div className="flex items-center justify-between pt-3 border-t border-gray-100">
-                          <div className="flex items-center text-xs text-gray-500">
-                            <Calendar className="h-3 w-3 mr-1" />
-                            {formatDate(review.date)}
-                          </div>
-                          {review.badge_text && (
-                            <Badge 
-                              variant="secondary" 
-                              className={`bg-gradient-to-r ${color} text-white border-0 text-xs px-2 py-1 rounded-full`}
-                            >
-                              {review.badge_text}
-                            </Badge>
-                          )}
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
 
-              {/* Hide scrollbar with CSS */}
-              <style jsx>{`
-                .no-scrollbar::-webkit-scrollbar {
-                  display: none;
-                }
-              `}</style>
-
-              {/* Prev/Next Buttons below the cards */}
-              <div className="flex justify-center space-x-4 mt-6">
-                <Button
-                  variant="outline"
-                  onClick={() => scrollRef.current?.scrollBy({ left: -500, behavior: "smooth" })}
-                  className="rounded-full px-6 py-2 text-sm"
+              {/* Navigation Buttons */}
+              <div className="flex justify-center space-x-4 mt-8">
+                <button
+                  onClick={scrollLeft}
+                  className="px-6 py-2 border border-gray-300 rounded-full text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors duration-200"
                 >
                   ⬅ Previous
-                </Button>
-                <Button
-                  variant="outline"
-                  onClick={() => scrollRef.current?.scrollBy({ left: 500, behavior: "smooth" })}
-                  className="rounded-full px-6 py-2 text-sm"
+                </button>
+                <button
+                  onClick={scrollRight}
+                  className="px-6 py-2 border border-gray-300 rounded-full text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors duration-200"
                 >
                   Next ➡
-                </Button>
+                </button>
               </div>
             </div>
 
             {/* View All Button */}
             <div className="text-center">
-              <Button
-                size="lg"
-                variant="outline"
-                className={`px-8 py-4 text-lg border-2 hover:bg-gradient-to-r hover:${color} hover:text-white hover:border-transparent transition-all duration-300 rounded-full`}
+              <button
+                className={`px-8 py-4 text-lg border-2 border-gray-300 rounded-full font-medium text-gray-700 hover:bg-gradient-to-r hover:${color} hover:text-white hover:border-transparent transition-all duration-300`}
               >
                 View All {title}
-              </Button>
+              </button>
             </div>
           </div>
         </div>
+
+        {/* CSS for hiding scrollbar */}
+        <style jsx>{`
+          .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+          }
+          .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+          }
+        `}</style>
       </section>
     </div>
   )
