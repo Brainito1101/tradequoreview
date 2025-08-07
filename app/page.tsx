@@ -7,7 +7,7 @@ import Header from "@/components/header"
 import Footer from "@/components/footer"
 import ReviewSection from "@/components/review-section"
 import HeroSection from "@/components/hero-section"
-import TestimonialsSection from "@/components/testimonials-section"
+
 
 
 export default function HomePage() {
@@ -90,7 +90,7 @@ useEffect(() => {
           />*/}
         </div>
 
-        <TestimonialsSection />
+        
 
         
       </main>
