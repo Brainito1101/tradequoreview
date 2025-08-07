@@ -324,7 +324,7 @@ export default function ReviewSection({ title, subtitle, platform, color, delay 
 
   return (
     <div className="w-full">
-      <section id={`${platform}-section`} className="py-20 relative overflow-hidden">
+      <section id={`${platform}-section`} className="relative overflow-hidden">
         {/* Background Blobs */}
         <div className={`absolute top-20 left-20 w-72 h-72 bg-gradient-to-r ${color} opacity-5 rounded-full blur-3xl`} />
         <div className={`absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r ${color} opacity-5 rounded-full blur-3xl`} />
@@ -333,9 +333,7 @@ export default function ReviewSection({ title, subtitle, platform, color, delay 
           <div className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
             {/* Header */}
             <div className="text-center mb-16">
-              <div className={`inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r ${color} rounded-3xl mb-6 shadow-xl`}>
-                <Star className="h-10 w-10 text-white" />
-              </div>
+              
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{title}</h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">{subtitle}</p>
             </div>
@@ -444,13 +442,7 @@ export default function ReviewSection({ title, subtitle, platform, color, delay 
             </div>
 
             {/* View All Button */}
-            <div className="text-center">
-              <button
-                className={`px-8 py-4 text-lg border-2 border-gray-300 rounded-full font-medium text-gray-700 hover:bg-gradient-to-r hover:${color} hover:text-white hover:border-transparent transition-all duration-300`}
-              >
-                View All {title}
-              </button>
-            </div>
+            
           </div>
         </div>
 
